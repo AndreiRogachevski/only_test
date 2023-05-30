@@ -1,6 +1,5 @@
 <?php
 include_once 'includes/header.php';
-include 'database.php';
 include 'functions.php';
 
 if (isset($_POST)) {

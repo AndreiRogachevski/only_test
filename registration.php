@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/header.php';
 ?>
-<div class="row justify-content-center pt-5">
+<div class="row justify-content-center pt-5 mb-5">
   <?php
   if (isset($_GET['error'])) {
     echo "<h4 class='text-center'>$_GET[error]</h4>";
