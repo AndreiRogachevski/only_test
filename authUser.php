@@ -20,7 +20,7 @@ if (isset($_POST)) {
     header("Location: /auth.php?fail=$result");
   } else {
     foreach ($result as $key => $value) {
-      $_SESSION[$key] = $value;
+      $_SESSION[htmlspecialchars($key)] = htmlspecialchars($value);
     }
     header('Location: /');
   }

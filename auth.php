@@ -1,5 +1,6 @@
 <?php
-require_once 'includes/header.php'
+require_once 'includes/header.php';
+
 ?>
 <div class="row justify-content-center pt-5 mb-5">
   <?php
@@ -29,3 +30,5 @@ require_once 'includes/header.php'
 <?php
 require_once 'includes/footer.php';
 ?>
+<script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js" async defer></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.min.js" async defer></script>

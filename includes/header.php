@@ -11,7 +11,7 @@ session_start();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer>
   </script>
-  <title>Document</title>
+  <title>Test ONLY</title>
 </head>
 
 <body>
@@ -26,8 +26,15 @@ session_start();
         <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
       </ul>
       <div class="col-md-3 text-end">
-        <a href="auth.php" type="button" class="btn btn-outline-primary me-2">Login</a>
-        <a href="registration.php" type="button" class="btn btn-primary">Sign-up</a>
+        <?php
+        if (isset($_SESSION['name'])) {
+          echo '<a href="profile.php" class="pe-3 text-decoration-none text-reset">' . $_SESSION['name'] . '</a><a href="/logout.php" class="btn btn-primary">Выйти</a>';
+        } else {
+          echo '<a href="auth.php" type="button" class="btn btn-outline-primary me-2">Login</a>
+          <a href="registration.php" type="button" class="btn btn-primary">Sign-up</a>';
+        }
+        ?>
+
       </div>
     </div>
   </header>
