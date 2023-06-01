@@ -16,26 +16,30 @@ session_start();
 
 <body>
   <header class="border-bottom mb-4">
-    <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-      </a>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
-      </ul>
-      <div class="col-md-3 text-end">
-        <?php
-        if (isset($_SESSION['name'])) {
-          echo '<a href="profile.php" class="pe-3 text-decoration-none text-reset">' . $_SESSION['name'] . '</a><a href="/logout.php" class="btn btn-primary">Выйти</a>';
-        } else {
-          echo '<a href="auth.php" type="button" class="btn btn-outline-primary me-2">Login</a>
-          <a href="registration.php" type="button" class="btn btn-primary">Sign-up</a>';
-        }
-        ?>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container py-3">
+        <a href="/" class="d-flex align-items-center col-4 mb-2 mb-md-0 text-dark text-decoration-none">
+          <h3>ONLY</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav col-6 mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 link-secondary">На главную</a></li>
+          </ul>
+          <div class="col-6 text-end">
+            <?php
+            if (isset($_SESSION['name'])) {
+              echo '<a href="profile.php" class="pe-3 text-decoration-none text-reset">' . $_SESSION['name'] . '</a><a href="/logout.php" class="btn btn-primary">Выйти</a>';
+            } else {
+              echo '<a href="authentication-form.php" type="button" class="btn btn-outline-primary me-2">Войти</a>
+            <a href="registration-form.php" type="button" class="btn btn-primary">Регистрация</a>';
+            }
+            ?>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <div class="container">

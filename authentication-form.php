@@ -10,7 +10,7 @@ require_once 'includes/header.php';
     };
   }
   ?>
-  <form action="authUser.php" method="post" class="col-3 g-3">
+  <form action="authorization.php" method="post" class="col-3 g-3">
     <div class="mb-3">
       <label for="authData" class="form-label">
         Введите телефон или почту
@@ -30,5 +30,3 @@ require_once 'includes/header.php';
 <?php
 require_once 'includes/footer.php';
 ?>
-<script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js" async defer></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.min.js" async defer></script>

@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+include 'data-base/database.php';
 
 function generateToken($length = 8)
 {
